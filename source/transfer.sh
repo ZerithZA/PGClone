@@ -95,7 +95,7 @@ else
     --user-agent="$useragent" \
     --drive-chunk-size={{dcs}} \
     --exclude="**_HIDDEN~" --exclude=".unionfs/**" \
-    --exclude="**partial~" --exclude=".unionfs-fuse/**" \
+    --exclude="*partial~" --exclude=".unionfs-fuse/**" \
     --exclude=".fuse_hidden**" --exclude="**.grab/**"
 fi
 
