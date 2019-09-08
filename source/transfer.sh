@@ -100,4 +100,5 @@ else
 fi
 
 grep -v "$uploadfile" "/pg/logs/.transfer_list" | sponge "/pg/logs/.transfer_list"
+done </pg/logs/.transfer_list
 exit
