@@ -42,8 +42,10 @@ while read p; do
   sed -i "/^$p\b/Id" /pg/logs/.temp_list
 done </pg/logs/.transfer_list
 
-head -n +1 /pg/logs/.temp_list >> /pg/logs/.transfer_list
-uploadfile=$(head -n +1 /pg/logs/.temp_list)
+head -n +8 /pg/logs/.temp_list >> /pg/logs/.transfer_list
+
+while read p; do
+uploadfile=$p
 
 if [[ "$uploadfile" == "" ]]; then
 echo "Nothing To Upload" >> /pg/logs/transfer.log
