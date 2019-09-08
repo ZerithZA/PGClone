@@ -36,7 +36,7 @@ echo "Max Files of [8] Files - Pending Transfer" >> /pg/logs/transfer.log
 echo "Exiting Cycle" >> /pg/logs/transfer.log
 exit; fi
 
-find /pg/transfer/ -type f > /pg/logs/.temp_list
+find /pg/transfer/ -type f -not "*partial~" > /pg/logs/.temp_list
 
 while read p; do
   sed -i "/^$p\b/Id" /pg/logs/.temp_list
